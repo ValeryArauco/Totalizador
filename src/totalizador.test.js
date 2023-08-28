@@ -98,4 +98,11 @@ describe("Totalizador", () => {
 
   });
   
+  it("Deberia mostrar el precio total aplicado el descuento para 10000", () => {
+    totalizador.precio = 1000;
+    totalizador.cantidad = 10;
+    totalizador.estado = "";
+    expect(totalizador.obtenerPrecioTotal()).toEqual(9000);
+
+  });
 });
