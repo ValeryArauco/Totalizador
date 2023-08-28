@@ -37,7 +37,17 @@ describe("Totalizador", () => {
   it("Deberia mostrar el precio total aplicado el impuesto para CA", () => {
     totalizador.precio = 45;
     totalizador.cantidad = 2;
+    totalizador.estado = "CA";
     expect(totalizador.obtenerPrecioTotal()).toEqual(97.425);
 
   });
+
+  it("Deberia mostrar el precio total aplicado el impuesto para TX", () => {
+    totalizador.precio = 45;
+    totalizador.cantidad = 2;
+    totalizador.estado = "TX";
+    expect(totalizador.obtenerPrecioTotal()).toEqual(95.625);
+
+  });
+
 });
