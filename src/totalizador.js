@@ -44,7 +44,11 @@ class Totalizador{
   }
 
   obtenerPorcentaje(valor){
-    return  valor + "%";
+    return  "%" + valor;
+  }
+
+  obtenerPrecio(valor){
+    return  "$" + valor;
   }
 
   obtenerDescuento(){

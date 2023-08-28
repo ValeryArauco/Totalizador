@@ -135,7 +135,15 @@ describe("Totalizador", () => {
     totalizador.precio = 1000;
     totalizador.cantidad = 10;
     totalizador.estado = "CA";
-    expect(totalizador.obtenerPorcentaje(totalizador.obtenerPorcentajeDeDescuento())).toEqual("10%");
+    expect(totalizador.obtenerPorcentaje(totalizador.obtenerPorcentajeDeDescuento())).toEqual("%10");
+
+  });
+
+  it("Deberia mostrar valores con el simbolo de dolar", () => {
+    totalizador.precio = 1000;
+    totalizador.cantidad = 10;
+    totalizador.estado = "CA";
+    expect(totalizador.obtenerPrecio(totalizador.obtenerPrecioNeto())).toEqual("$10000");
 
   });
 });
