@@ -122,4 +122,12 @@ describe("Totalizador", () => {
     expect(totalizador.obtenerPorcentajeDeDescuento()).toEqual(15);
 
   });
+
+  it("Deberia mostrar el precio total aplicando el impuesto y el descuento", () => {
+    totalizador.precio = 1000;
+    totalizador.cantidad = 10;
+    totalizador.estado = "CA";
+    expect(totalizador.obtenerPrecioTotal()).toEqual(9825);
+
+  });
 });
