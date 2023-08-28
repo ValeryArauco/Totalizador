@@ -65,6 +65,19 @@ class Totalizador{
     return this.obtenerPrecioNeto() + this.obtenerImpuesto() - this.obtenerDescuento();
   }
 
+  totalizar(cantidad, precio, estado){
+    this.cantidad = cantidad;
+    this.precio = precio;
+    this.estado = estado;
+
+    const precioNeto = this.obtenerPrecio(this.obtenerPrecioNeto());
+    const descuento = this.obtenerPorcentaje(this.obtenerPorcentajeDeDescuento());
+    const impuesto = this.obtenerPrecio(this.obtenerImpuesto());
+    const precioTotal = this.obtenerPrecio(this.obtenerPrecioTotal());
+    return "Precio neto: " + precioNeto + "<br>Descuento: " + descuento + "<br>Impuesto: " + impuesto + "<br>Precio total: " + precioTotal;
+  }
 }
+
+
 
 export default Totalizador;

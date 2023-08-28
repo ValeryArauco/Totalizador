@@ -16,18 +16,8 @@ form.addEventListener("submit", (event) => {
   const estado = state.value;
 
   const totalizador = new Totalizador();
-  totalizador.cantidad = cantidad;
-  totalizador.precio = precio;
-  totalizador.estado = estado;
 
-  div.innerHTML = "<p>" + "Cantidad de items: "+ totalizador.cantidad + "</p>"
- + "<p>" + "Precio por item: "+ totalizador.precio + "</p>"
- + "<p>" + "Codigo de estado: "+ totalizador.estado + "</p>"
- + "<p>" + "Impuesto de estado: "+ totalizador.obtenerPorcentaje(totalizador.obtenerPorcentajeDeImpuesto()) + "</p>"
- + "<p>" + "Precio neto: "+ totalizador.obtenerPrecioNeto() + "</p>"
- + "<p>" + "Impuesto total: "+ totalizador.obtenerImpuesto() + "</p>"
- + "<p>" + "Porcentaje de descuento: "+ totalizador.obtenerPorcentaje(totalizador.obtenerPorcentajeDeDescuento()) + "</p>"
- + "<p>" + "Precio total: "+ totalizador.obtenerPrecioTotal() + "</p>";
+  div.innerHTML = "<p>" + totalizador.totalizar(cantidad, precio, estado) + "</p>";
 
 });
 

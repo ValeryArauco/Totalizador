@@ -140,10 +140,6 @@ describe("Totalizador", () => {
   });
 
   it("Deberia mostrar valores con el simbolo de dolar", () => {
-    totalizador.precio = 1000;
-    totalizador.cantidad = 10;
-    totalizador.estado = "CA";
-    expect(totalizador.obtenerPrecio(totalizador.obtenerPrecioNeto())).toEqual("$10000");
-
+    expect(totalizador.totalizar(20, 3, "TX")).toEqual("Precio neto: $60<br>Descuento: %0<br>Impuesto: $3.75<br>Precio total: $63.75");
   });
 });
