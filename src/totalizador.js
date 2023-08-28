@@ -43,6 +43,10 @@ class Totalizador{
     }
   }
 
+  obtenerPorcentaje(valor){
+    return  valor + "%";
+  }
+
   obtenerDescuento(){
     return this.obtenerPorcentajeDeDescuento()/100 * this.obtenerPrecioNeto();
   }

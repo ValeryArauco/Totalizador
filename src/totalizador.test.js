@@ -130,4 +130,12 @@ describe("Totalizador", () => {
     expect(totalizador.obtenerPrecioTotal()).toEqual(9825);
 
   });
+
+  it("Deberia mostrar el simbolo de porcentaje", () => {
+    totalizador.precio = 1000;
+    totalizador.cantidad = 10;
+    totalizador.estado = "CA";
+    expect(totalizador.obtenerPorcentaje(totalizador.obtenerPorcentajeDeDescuento())).toEqual("10%");
+
+  });
 });
