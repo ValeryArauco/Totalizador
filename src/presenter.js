@@ -1,28 +1,19 @@
-import sumar from "./sumador";
-import multiplicar from "./multiplicador";
+import Totalizador from "./totalizador";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const first1 = document.querySelector("#first-number");
-const second1 = document.querySelector("#second-number");
-const form = document.querySelector("#sumar-form");
-const form1 = document.querySelector("#multiplicar-form");
+
+const amount = document.querySelector("#cantidad");
+//const second = document.querySelector("#segundo-numero");
+
+const form = document.querySelector("#totalizador-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const totalizador = new Totalizador();
+  const cantidad = Number.parseInt(amount.value);
+  //const secondNumber = Number.parseInt(second.value);
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML = "<p>" + totalizador.totalizar(cantidad) + "</p>";
 });
 
-form1.addEventListener("submit", (event) => {
-  event.preventDefault();
-
-  const firstNumber = Number.parseInt(first1.value);
-  const secondNumber = Number.parseInt(second1.value);
-
-  div.innerHTML = "<p>" + multiplicar(firstNumber, secondNumber) + "</p>";
-});
