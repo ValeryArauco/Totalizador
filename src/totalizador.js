@@ -1,7 +1,9 @@
 class Totalizador{
-  constructor(){
-    pass;
-  };
+  cantidad;
+
+  
+
+ 
 }
 
 export default Totalizador;

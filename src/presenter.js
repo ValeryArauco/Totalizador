@@ -10,10 +10,13 @@ const div = document.querySelector("#resultado-div");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const totalizador = new Totalizador();
+  
   const cantidad = Number.parseInt(amount.value);
   //const secondNumber = Number.parseInt(second.value);
 
-  div.innerHTML = "<p>" + totalizador.totalizar(cantidad) + "</p>";
+  const totalizador = new Totalizador();
+  totalizador.cantidad = cantidad;
+
+  div.innerHTML = "<p>" + "Cantidad de items: "+ totalizador.cantidad + "</p>";
 });
 

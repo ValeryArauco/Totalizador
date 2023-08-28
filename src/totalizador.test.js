@@ -1,7 +1,11 @@
-import sumar from "./sumador.js";
+import totalizador from "./totalizador.js";
 
-describe("Sumar", () => {
-  it("deberia sumar dos numeros", () => {
-    expect(sumar(3, 2)).toEqual(5);
+//let totalizador = new totalizador();
+
+describe("Totalizador", () => {
+  it("Deberia mostrar en pantalla la cantidad de items ingresados", () => {
+    totalizador.cantidad = 5;
+    expect(totalizador.cantidad).toEqual(5);
+
   });
 });
