@@ -24,6 +24,9 @@ form.addEventListener("submit", (event) => {
  + "<p>" + "Precio por item: "+ totalizador.precio + "</p>"
  + "<p>" + "Codigo de estado: "+ totalizador.estado + "</p>"
  + "<p>" + "Impuesto de estado: "+ totalizador.obtenerPorcentajeDeImpuesto() + "%" + "</p>"
- + "<p>" + "Precio neto: "+ totalizador.calcularPrecioNeto() + "</p>";
+ + "<p>" + "Precio neto: "+ totalizador.obtenerPrecioNeto() + "</p>"
+ + "<p>" + "Impuesto total: "+ totalizador.obtenerImpuesto() + "</p>"
+ + "<p>" + "Precio total: "+ totalizador.obtenerPrecioTotal() + "</p>";
+
 });
 

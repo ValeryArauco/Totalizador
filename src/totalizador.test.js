@@ -30,7 +30,14 @@ describe("Totalizador", () => {
   it("Deberia mostrar el precio neto", () => {
     totalizador.precio = 45;
     totalizador.cantidad = 2;
-    expect(totalizador.calcularPrecioNeto()).toEqual(90);
+    expect(totalizador.obtenerPrecioNeto()).toEqual(90);
+
+  });
+
+  it("Deberia mostrar el precio total aplicado el impuesto para CA", () => {
+    totalizador.precio = 45;
+    totalizador.cantidad = 2;
+    expect(totalizador.obtenerPrecioTotal()).toEqual(97.425);
 
   });
 });

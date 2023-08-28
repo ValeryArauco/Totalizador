@@ -22,8 +22,16 @@ class Totalizador{
     }
   }
 
-  calcularPrecioNeto(){
+  obtenerPrecioNeto(){
     return this.cantidad * this.precio;
+  }
+
+  obtenerImpuesto(){
+    return this.obtenerPorcentajeDeImpuesto()/100 * this.obtenerPrecioNeto();
+  }
+  
+  obtenerPrecioTotal(){
+    return this.obtenerPrecioNeto() + this.obtenerImpuesto();
   }
 
 }
