@@ -50,4 +50,20 @@ describe("Totalizador", () => {
 
   });
 
+  it("Deberia mostrar el precio total aplicado el impuesto para AL", () => {
+    totalizador.precio = 45;
+    totalizador.cantidad = 2;
+    totalizador.estado = "AL";
+    expect(totalizador.obtenerPrecioTotal()).toEqual(93.6);
+
+  });
+
+  it("Deberia mostrar el precio total aplicado el impuesto para NV", () => {
+    totalizador.precio = 45;
+    totalizador.cantidad = 2;
+    totalizador.estado = "NV";
+    expect(totalizador.obtenerPrecioTotal()).toEqual(97.2);
+
+  });
+
 });
