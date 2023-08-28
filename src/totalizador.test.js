@@ -66,4 +66,11 @@ describe("Totalizador", () => {
 
   });
 
+  it("Deberia mostrar el precio total aplicado el impuesto para UT", () => {
+    totalizador.precio = 45;
+    totalizador.cantidad = 2;
+    totalizador.estado = "UT";
+    expect(totalizador.obtenerPrecioTotal()).toEqual(95.985);
+
+  });
 });
