@@ -22,6 +22,7 @@ form.addEventListener("submit", (event) => {
 
   div.innerHTML = "<p>" + "Cantidad de items: "+ totalizador.cantidad + "</p>"
  + "<p>" + "Precio por item: "+ totalizador.precio + "</p>"
- + "<p>" + "Codigo de estado: "+ totalizador.estado + "</p>";
+ + "<p>" + "Codigo de estado: "+ totalizador.estado + "</p>"
+ + "<p>" + "Impuesto de estado: "+ totalizador.obtenerPorcentajeDeImpuesto() + "%" + "</p>";
 });
 

@@ -1,6 +1,6 @@
-import totalizador from "./totalizador.js";
+import Totalizador from "./totalizador.js";
 
-//let totalizador = new totalizador();
+const totalizador = new Totalizador();
 
 describe("Totalizador", () => {
   it("Deberia mostrar en pantalla la cantidad de items ingresados", () => {
@@ -18,6 +18,12 @@ describe("Totalizador", () => {
   it("Deberia mostrar el estado seleccionado", () => {
     totalizador.estado = "CA";
     expect(totalizador.estado).toEqual("CA");
+
+  });
+
+  it("Deberia mostrar el porcentaje de impuesto del estado seleccionado", () => {
+    totalizador.estado = "CA";
+    expect(totalizador.obtenerPorcentajeDeImpuesto()).toEqual(8.25);
 
   });
 });
