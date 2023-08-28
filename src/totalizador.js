@@ -22,6 +22,10 @@ class Totalizador{
     }
   }
 
+  calcularPrecioNeto(){
+    return this.cantidad * this.precio;
+  }
+
 }
 
 export default Totalizador;

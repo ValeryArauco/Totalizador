@@ -26,4 +26,11 @@ describe("Totalizador", () => {
     expect(totalizador.obtenerPorcentajeDeImpuesto()).toEqual(8.25);
 
   });
+
+  it("Deberia mostrar el precio neto", () => {
+    totalizador.precio = 45;
+    totalizador.cantidad = 2;
+    expect(totalizador.calcularPrecioNeto()).toEqual(90);
+
+  });
 });
