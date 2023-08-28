@@ -26,6 +26,7 @@ form.addEventListener("submit", (event) => {
  + "<p>" + "Impuesto de estado: "+ totalizador.obtenerPorcentajeDeImpuesto() + "%" + "</p>"
  + "<p>" + "Precio neto: "+ totalizador.obtenerPrecioNeto() + "</p>"
  + "<p>" + "Impuesto total: "+ totalizador.obtenerImpuesto() + "</p>"
+ + "<p>" + "Porcentaje de descuento: "+ totalizador.obtenerPorcentajeDeDescuento() + "%" + "</p>"
  + "<p>" + "Precio total: "+ totalizador.obtenerPrecioTotal() + "</p>";
 
 });

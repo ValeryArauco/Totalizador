@@ -114,4 +114,12 @@ describe("Totalizador", () => {
     expect(totalizador.obtenerPrecioTotal()).toEqual(25500);
 
   });
+
+  it("Deberia mostrar el valor del porcentaje de descuento", () => {
+    totalizador.precio = 1000;
+    totalizador.cantidad = 30;
+    totalizador.estado = "";
+    expect(totalizador.obtenerPorcentajeDeDescuento()).toEqual(15);
+
+  });
 });

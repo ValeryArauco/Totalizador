@@ -22,26 +22,32 @@ class Totalizador{
     }
   }
 
-  obtenerDescuento(){
+  obtenerPrecioNeto(){
+    return this.cantidad * this.precio;
+  }
+
+  obtenerPorcentajeDeDescuento(){
     switch (true) {
       case this.obtenerPrecioNeto() < 1000:
         return 0;
       case this.obtenerPrecioNeto() < 3000:
-        return 3/100 * this.obtenerPrecioNeto();
+        return 3;
       case this.obtenerPrecioNeto() < 7000:
-        return 5/100 * this.obtenerPrecioNeto();
+        return 5;
       case this.obtenerPrecioNeto() < 10000:
-        return 7/100 * this.obtenerPrecioNeto();
+        return 7;
       case this.obtenerPrecioNeto() < 30000:
-        return 10/100 * this.obtenerPrecioNeto();
+        return 10;
       default:
-        return 15/100 * this.obtenerPrecioNeto();
+        return 15;
     }
   }
 
-  obtenerPrecioNeto(){
-    return this.cantidad * this.precio;
+  obtenerDescuento(){
+    return this.obtenerPorcentajeDeDescuento()/100 * this.obtenerPrecioNeto();
   }
+
+
 
   obtenerImpuesto(){
     return this.obtenerPorcentajeDeImpuesto()/100 * this.obtenerPrecioNeto();
